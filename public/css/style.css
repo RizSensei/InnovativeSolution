@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lexend+Deca:wght@100..900&display=swap");
+
+* {
+  /* font-family: "Poppins", sans-serif; */
+  font-family: "Lato", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+.nav-item.active {
+  text-decoration: underline;
+  color: #305A30;
+  font-family: 600;
+}
+
+/* mobile sidebar show and hide  */
+#mobile-sidebar {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#mobile-sidebar.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.navbar-anchor-links {
+  width: 100%;
+  color: #2a3f62;
+  text-decoration: none;
+  padding-bottom: 5px;
+}
+
+.navbar-anchor-links.active{
+  border-bottom: 3px solid #2a3f62;
+}
+
+.about-links-ul > li:not(:last-child) {
+  border-right: 1px solid rgb(209 213 219);
+}
+.about-links-ul > li {
+  padding: 0px 12px;
+  cursor: pointer;
+}
+.about-links-ul > li > a {
+  text-decoration: none;
+  color: white;
+}
+
+.footer-anchor-links {
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  color: #2a3f62;
+  text-decoration: none;
+  border-radius: 0.375rem;
+}
+
+.form-input {
+  width: 100%;
+  padding: 12px 16px;
+  --tw-bg-opacity: 1;
+  background-color: rgb(243 244 246 / var(--tw-bg-opacity)) /* #f3f4f6 */;
+  font-size: 0.875rem /* 14px */;
+  line-height: 1.25rem /* 20px */;
+  outline-color: #2a3f62;
+  border: none;
+}
+
+.owl-carousel > .owl-dots{
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.owl-carousel > .owl-dots > .owl-dot > span {
+  border-radius: 0% !important;
+  width: 50px !important;
+  height: 3px !important;
+}
+
+/* .owl-carousel > .owl-nav > .owl-prev, .owl-carousel > .owl-nav > .owl-next  {
+  color: #fff !important;
+  font-size: 32px !important;
+  background-color: #2a3f62 !important;
+  height: 70px !important;
+  width: 50px !important;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 20;
+}
+
+.owl-carousel > .owl-nav > .owl-prev{
+  left: 0;
+}
+.owl-carousel > .owl-nav > .owl-next{
+  right: 0;
+} */

@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Innovative Solution</title>
+    <link rel="stylesheet" href="/public/css/output.css" />
+    <link rel="stylesheet" href="/public/css/style.css" />
+    <script src="/public/js/icon.js" defer></script>
+    <script src="/public/js/script.js" defer></script>
+    <script src="/public/mock/functional_modules.js" defer></script>
+    <script
+      src="https://kit.fontawesome.com/0a09f83869.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- owl carousel starts  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script src="/public/js/owl.js" defer></script>
+    <!-- owl carousel ends  -->
+  </head>
+  <body class="relative h-full w-full">
+    <div class="h-full w-full flex flex-col">
+      <header>
+        <div class="text-xs 2xl:text-sm bg-blue text-white px-5 py-2">
+          <div class="flex justify-between">
+            <div class="flex gap-1 items-center">
+              <span id="phone-Icon"></span>
+              <span>+977-01-5446880</span>
+            </div>
+            <div class="flex gap-1 items-center">
+              <span id="mail-Icon"></span>
+              <span>insol@innovativesolution.com.np</span>
+            </div>
+          </div>
+        </div>
+      </header>
+      <nav class="sticky top-0 z-50 bg-white py-3 px-5 shadow-md">
+        <div class="flex justify-between items-center">
+          <a href="/src/index.html" class="no-underline">
+            <img
+              src="/public/images/logo/Innovative logo.png"
+              alt="Innovative Solution Logo"
+              class="h-12"
+            />
+          </a>
+          <div class="hidden lg:inline-block gap-2">
+            <ul class="list-none text-sm flex flex-col lg:flex-row gap-5">
+              <li>
+                <a href="/src/news.html" class="navbar-anchor-links"
+                  >News and Updates</a
+                >
+              </li>
+              <li>
+                <a href="/src/about.html" class="navbar-anchor-links"
+                  >About us</a
+                >
+              </li>
+              <li>
+                <a href="/src/services.html" class="navbar-anchor-links"
+                  >Our Services</a
+                >
+              </li>
+              <li>
+                <a href="/src/imis.html" class="navbar-anchor-links">IMIS</a>
+              </li>
+              <li>
+                <a href="/src/ebps.html" class="navbar-anchor-links">e-BPS</a>
+              </li>
+              <li>
+                <a href="#" class="navbar-anchor-links">Knowledge Products</a>
+              </li>
+            </ul>
+          </div>
+          <span id="open-mobile-nav" class="lg:hidden">
+            <button
+              id="hamburger-Icon"
+              class="bg-white border-none cursor-pointer text-blue"
+            ></button
+          ></span>
+        </div>
+      </nav>
+
+      <div class="lg:hidden">
+        <div
+          id="mobile-sidebar"
+          class="fixed top-0 z-[100] overflow-hidden h-screen w-full bg-black bg-opacity-50"
+        >
+          <div class="flex w-full h-full">
+            <div
+              class="h-full w-80 bg-white px-3 pt-3 pb-5 flex flex-col gap-5 overflow-y-auto"
+            >
+              <div
+                class="pb-2 flex justify-between items-center border-b border-solid border-x-0 border-t-0 border-b-blue/50"
+              >
+                <a href="/src/index.html">
+                  <img
+                    src="/public/images/logo/Innovative logo.png"
+                    alt="Innovative Solution Logo"
+                    class="h-16"
+                  />
+                </a>
+                <span id="close-mobile-nav">
+                  <button
+                    id="close-Icon"
+                    class="border-none bg-white cursor-pointer text-xl text-red-500"
+                  ></button>
+                </span>
+              </div>
+              <div class="flex flex-col gap-5 justify-between">
+                <ul class="list-none text-sm flex flex-col lg:flex-row gap-5">
+                  <li>
+                    <a href="/src/news.html" class="navbar-anchor-links"
+                      >News and Updates</a
+                    >
+                  </li>
+                  <li>
+                    <a href="/src/about.html" class="navbar-anchor-links"
+                      >About us</a
+                    >
+                  </li>
+                  <li>
+                    <a href="/src/services.html" class="navbar-anchor-links"
+                      >Our Services</a
+                    >
+                  </li>
+                  <li>
+                    <a href="/src/imis.html" class="navbar-anchor-links"
+                      >IMIS</a
+                    >
+                  </li>
+                  <li>
+                    <a href="/src/ebps.html" class="navbar-anchor-links"
+                      >e-BPS</a
+                    >
+                  </li>
+                  <li>
+                    <a href="#" class="navbar-anchor-links"
+                      >Knowledge Products</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div id="mobile-sidebar-right" class="flex-grow"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex-grow">
+        <div class="px-5 sm:px-10 md:px-14 xl:px-20 2xl:px-60 py-10">
+          <!-- imis introduction -->
+          <div class="py-5 lg:flex lg:flex-row-reverse gap-10">
+            <div class="h-full w-full lg:w-1/2">
+              <object
+                type="image/svg+xml"
+                data="/public/images/imis/modules of imis.svg"
+              ></object>
+            </div>
+            <div
+              class="w-full lg:w-1/2 mt-5 flex flex-col justify-center items-center lg:items-start text-center lg:text-left space-y-5 md:space-y-7 lg:space-y-8"
+            >
+              <h1
+                class="font-semibold 2xl:font-bold text-2xl lg:text-3xl text-blue leading-tight"
+              >
+                INTEGRATED MUNICIPAL INFORMATION SYSTEM
+              </h1>
+              <p class="text-sm 2xl:text-base text-light-black font-medium text-justify">
+                The Integrated Municipal Information System (IMIS) is a
+                comprehensive digital platform that seamlessly merges web,
+                mobile and GIS technologies, leveraging open-source software
+                platforms. The innovative system offers a comprehensive solution
+                for managing the entirety of a city’s information. IMIS stands
+                as a holistic solution designed to manage the complete
+                information of a city, empowering local governments in the
+                planning, management, and monitoring & evaluation of sanitation
+                systems and services with the aim of achieving SDG 6.2 through
+                the Citywide Inclusive Sanitation (CWIS) approach.
+              </p>
+            </div>
+          </div>
+
+          <!-- cwis introduction  -->
+          <div class="h-full w-full">
+            <div class="w-full h-full flex flex-col gap-5">
+              <div class="w-full text-center">
+                <h1
+                  class="mt-5 font-semibold text-xl md:text-2xl text-[#1E2F5B] leading-tight"
+                >
+                  Citywide Inclusive Sanitation (CWIS)
+                </h1>
+              </div>
+              <div class="w-full">
+                <div class="h-full w-full">
+                  <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
+                    <table
+                      class="w-full text-sm text-left rtl:text-right text-black"
+                    >
+                      <thead
+                        class="text-black uppercase bg-[#bdd7d1] font-bold"
+                      >
+                        <tr>
+                          <th
+                            scope="col"
+                            class="px-2 py-3 border-r-2 border-white font-semibold"
+                          >
+                            CORE CWIS OUTCOMES
+                          </th>
+                          <th
+                            scope="col"
+                            class="px-3 py-1 border-r-2 border-b-2 border-white"
+                          >
+                            <h3 class="font-semibold">EQUITY</h3>
+                            <div class="flex gap-0.5">
+                              <div class="h-12 aspect-square bg-white">
+                                <img
+                                  src="/public/images/imis/Global_goals/Clean water and sanitation.png"
+                                  alt="Clean Water and Sanitation"
+                                  class="h-full w-full object-contain"
+                                />
+                              </div>
+                              <div class="h-12 aspect-square bg-white">
+                                <img
+                                  src="/public/images/imis/Global_goals/Sustainable cities and communities.png"
+                                  alt="Sustainable cities and communities"
+                                  class="h-full w-full object-contain"
+                                />
+                              </div>
+                              <div class="h-12 aspect-square bg-white">
+                                <img
+                                  src="/public/images/imis/Global_goals/Gender Equality.png"
+                                  alt="Gender Equality"
+                                  class="h-full w-full object-contain"
+                                />
+                              </div>
+                              <div class="h-12 aspect-square bg-white">
+                                <img
+                                  src="/public/images/imis/Global_goals/Good Health and well-being.png"
+                                  alt="Good Health and well-being"
+                                  class="h-full w-full object-contain"
+                                />
+                              </div>
+                            </div>
+                          </th>
+                          <th
+                            scope="col"
+                            class="px-3 py-1 border-r-2 border-b-2 border-white"
+                          >
+                            <h3 class="font-semibold">SAFETY</h3>
+                            <div class="flex gap-0.5">
+                              <div class="h-12 aspect-square bg-white">
+                                <img
+                                  src="/public/images/imis/Global_goals/Clean water and sanitation.png"
+                                  alt="Clean Water and Sanitation"
+                                  class="h-full w-full object-contain"
+                                />
+                              </div>
+                              <div class="h-12 aspect-square bg-white">
+                                <img
+                                  src="/public/images/imis/Global_goals/Good Health and well-being.png"
+                                  alt="Good Health and well-being"
+                                  class="h-full w-full object-contain"
+                                />
+                              </div>
+                              <div class="h-12 aspect-square bg-white">
+                                <img
+                                  src="/public/images/imis/Global_goals/Sustainable cities and communities.png"
+                                  alt="Sustainable cities and communities"
+                                  class="h-full w-full object-contain"
+                                />
+                              </div>
+                            </div>
+                          </th>
+                          <th
+                            scope="col"
+                            class="px-3 py-1 border-b-2 border-white"
+                          >
+                            <h3 class="font-semibold">SUSTAINABILITY</h3>
+                            <div class="flex gap-0.5">
+                              <div class="h-12 aspect-square bg-white">
+                                <img
+                                  src="/public/images/imis/Global_goals/Clean water and sanitation.png"
+                                  alt="Clean Water and Sanitation"
+                                  class="h-full w-full object-contain"
+                                />
+                              </div>
+                              <div class="h-12 aspect-square bg-white">
+                                <img
+                                  src="/public/images/imis/Global_goals/Climate Action.png"
+                                  alt="Climate Action"
+                                  class="h-full w-full object-contain"
+                                />
+                              </div>
+                              <div class="h-12 aspect-square bg-white">
+                                <img
+                                  src="/public/images/imis/Global_goals/Good Health and well-being.png"
+                                  alt="Good Health and well-being"
+                                  class="h-full w-full object-contain"
+                                />
+                              </div>
+                              <div class="h-12 aspect-square bg-white">
+                                <img
+                                  src="/public/images/imis/Global_goals/Sustainable cities and communities.png"
+                                  alt="Sustainable cities and communities"
+                                  class="h-full w-full object-contain"
+                                />
+                              </div>
+                            </div>
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr
+                          class="font-medium border-b bg-[#bdd7d1] text-neutral-900 border-white"
+                        >
+                          <th
+                            scope="row"
+                            class="px-3 py-1 border-r-2 whitespace-nowrap border-white"
+                          ></th>
+                          <td class="px-3 py-1 border-r-2 border-white">
+                            Services reflect fairness in distribution and
+                            prioritization of service quality, prices,
+                            deployment of public finance/subsidies
+                          </td>
+                          <td class="px-3 py-1 border-r-2 border-white">
+                            Services safeguard customers, workers and
+                            communities from safety and health risks by reaching
+                            everyone with safe sanitation
+                          </td>
+                          <td class="px-3 py-1">
+                            Services are reliably and continually delivered
+                            based on effective management of human, financial
+                            and natural resources
+                          </td>
+                        </tr>
+                      </tbody>
+
+                      <!-- second_________________ -->
+                      <thead
+                        class="text-black uppercase bg-[#e6efed] font-bold"
+                      >
+                        <tr>
+                          <th
+                            scope="col"
+                            class="px-2 py-3 border-r-2 border-white font-semibold"
+                          >
+                            CORE CWIS FUNCTIONS
+                          </th>
+                          <th
+                            scope="col"
+                            class="px-3 py-1 border-r-2 border-b-2 border-white"
+                          >
+                            <h3 class="font-semibold">RESPONSIBILITY</h3>
+                          </th>
+                          <th
+                            scope="col"
+                            class="px-3 py-1 border-r-2 border-b-2 border-white"
+                          >
+                            <h3 class="font-semibold">ACCOUNTABILITY</h3>
+                          </th>
+                          <th
+                            scope="col"
+                            class="px-3 py-1 border-b-2 border-white"
+                          >
+                            <h3 class="font-semibold">
+                              RESOURCE PLANNING AND MANAGEMENT
+                            </h3>
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr
+                          class="font-medium border-b bg-[#e6efed] text-neutral-900 border-white"
+                        >
+                          <th
+                            scope="row"
+                            class="px-3 py-1 border-r-2 border-white whitespace-nowrap"
+                          ></th>
+                          <td class="px-3 py-1 border-r-2 border-white">
+                            Authority(s) execute a clear public mandate to
+                            ensure safe, equitable and sustainable, sanitation
+                            services for all
+                          </td>
+                          <td class="px-3 py-1 border-r-2 border-white">
+                            Authority's(ies') performance against its mandate is
+                            monitored and managed with data, transparency, and
+                            incentives
+                          </td>
+                          <td class="px-3 py-1">
+                            Resources-human, financial, natural, assets-are
+                            effectively managed to support execution of mandate
+                            across time/space
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div class="w-full flex flex-col items-center justify-center">
+                <p class="text-sm 2xl:text-base text-light-black mt-2 text-justify">
+                  CWIS is an approach to achieve SDG 6.2 for safe, equitable and
+                  financially viable sanitation systems and services. CWIS
+                  ensures everyone in a city has access to safely managed
+                  sanitation and human waste is safely managed along the whole
+                  sanitation service chain ensuring protection of the
+                  environment and human health.<br /><br />
+                  CWIS approach focuses on service provision and its enabling
+                  environment after than on building infrastructure, therefore,
+                  reliable data is the key success factor for CWIS. UN Water SDG
+                  6 global acceleration framework has also identified data and
+                  information as one of the five accelerators of SDG 6 outcomes
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- water & sdg  -->
+          <div class="h-full w-full bg-blue mt-14">
+            <div
+              class="h-full py-10 px-10 lg:px-20 flex flex-col md:flex-row w-full gap-10 md:gap-20"
+            >
+              <div
+                class="w-full md:w-1/2 flex flex-col items-start border-2 border-y-0 border-x-0 lg:border-r-white"
+              >
+                <h1
+                  class="w-full text-xl md:text-2xl font-semibold text-white text-center md:text-start"
+                >
+                  Key Features
+                </h1>
+                <div class="mt-5 text-white text-sm 2xl:text-base font-light">
+                  <div class="w-full">
+                    <ul class="list-disc list-outside space-y-2 text-justify">
+                      <li>
+                        Spatial context for municipal data - infrastructure,
+                        services, and resources.
+                      </li>
+                      <li>
+                        Efficient storage and management of municipal data,
+                        including infrastructure and essential services.
+                      </li>
+                      <li>
+                        Integration of CWIS data to support planning,
+                        management, and evaluation of sanitation systems and
+                        services.
+                      </li>
+                      <li>
+                        Decision support tools for decision-making based on
+                        spatial analysis and modelling.
+                      </li>
+                      <li>
+                        Real-time dashboard for monitoring KPIs and CWIS
+                        indicators.
+                      </li>
+                      <li>
+                        User-friendly interfaces with access control features.
+                      </li>
+                      <li>
+                        Scalability to adapt to the evolving technology and
+                        information needs.
+                      </li>
+                      <li>
+                        Mainstreaming CWIS service chain into the city's
+                        business process.
+                      </li>
+                      <li>
+                        Interoperable with external data sources, including
+                        tax/revenue, public health, emergency response data and
+                        more.
+                      </li>
+                      <li>
+                        Robust security measures to safeguard sensitive data,
+                        ensuring city data privacy compliance.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="w-full md:w-1/2 flex flex-col mt-5 md:mt-0">
+                <h1
+                  class="text-center text-xl md:text-2xl font-semibold text-white"
+                >
+                  UN Water SDG 6 Global Acceleration Framework
+                </h1>
+                <img
+                  src="/public/images/imis/water-sdg-6.png"
+                  alt=""
+                  class="h-full w-full object-scale-down"
+                />
+              </div>
+            </div>
+          </div>
+
+          <!--Architecture-->
+          <div class="h-full w-full py-10">
+            <div
+              class="h-full flex flex-col items-center justify-center xl:flex-row space-y-5 xl:space-y-0 xl:space-x-5 2xl-justify-around"
+            >
+              <div
+                class="fade-in h-full w-full xl:w-1/2 flex flex-col space-y-5 items-center border-4 border-solid border-t-0 border-r-0 border-blue"
+              >
+                <div class="h-full md:h-[550px] w-full md:w-[550px]">
+                  <img
+                    src="/public/images/imis/system -architecture.png"
+                    alt=""
+                    class="fade-in h-full w-full object-contain"
+                  />
+                </div>
+                <div class="w-full flex justify-start">
+                  <h1 class="text-base text-white bg-blue p-2 px-5">
+                    System Architecture
+                  </h1>
+                </div>
+              </div>
+              <div
+                class="fade-in h-full w-full xl:w-1/2 flex flex-col-reverse items-center border-4 border-solid border-b-0 border-l-0 border-blue"
+              >
+                <div class="h-full md:h-[550px] w-full md:w-[550px]">
+                  <img
+                    src="/public/images/imis/imis-driven-service-model.png"
+                    alt=""
+                    class="fade-in h-full w-full object-contain"
+                  />
+                </div>
+
+                <div class="w-full flex justify-end">
+                  <h1 class="text-base text-white bg-blue p-2 px-5">
+                    IMIS Driven Service Model
+                  </h1>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--IMIS Facilitates-->
+          <div class="h-full w-full bg-gray-100 py-10 flex justify-center">
+            <div class="h-full md:h-[550px] w-full md:w-[600px]">
+              <img
+                src="/public/images/imis/what-imis-facilitates.png"
+                alt=""
+                class="fade-in h-full w-full object-scale-down"
+              />
+            </div>
+          </div>
+
+          <!--IMIS Functional Modules-->
+          <div class="h-full w-full mt-12 mb-2">
+            <div class="flex flex-col items-center justify-center">
+              <div class="w-full text-start">
+                <h1 class="font-semibold text-blue text-xl md:text-2xl">
+                  IMIS Functional Modules
+                </h1>
+              </div>
+              <div
+                id="module-container"
+                class="grid grid-cols-2 md:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-2"
+              >
+                <script>
+                  // Make sure this script runs after functional_modules is defined
+                  document.addEventListener("DOMContentLoaded", function () {
+                    const moduleSection =
+                      document.getElementById("module-container");
+
+                    moduleSection.innerHTML = functional_modules
+                      .map(
+                        (module) => `
+                          <div class="group relative flex flex-col mt-6 text-gray-700 border border-gray-200 bg-white shadow-lg hover:shadow-xl transform duration-300 ease-in-out bg-clip-border rounded-xl ">
+                            <div class="p-4">
+                              <object type="image/svg+xml" data="${module.icon}" width="75" height="75"></object>
+                              <h5 class="block mt-1 mb-2 font-sans text-base md:text-[18px] text-blue antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
+                                ${module.heading}
+                              </h5>
+                              <p class="block text-xs antialiased font-medium">
+                                ${module.description}
+                              </p>
+                            </div>
+                          </div>
+                        `
+                      )
+                      .join("");
+                  });
+                </script>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <footer>
+        <div class="px-5 lg:px-10 py-5 lg:py-8 bg-blue text-white text-sm">
+          <div
+            class="flex flex-col lg:flex-row gap-3 justify-between items-center"
+          >
+            <div class="text-center">
+              © Copyright <span> 2024</span> |  Innovative Solution Pvt. Ltd. |
+              All Rights Reserved |<span>Terms & Conditions</span> | <span
+                >Privacy Policy</span
+              >
+            </div>
+            <div class="flex gap-2">
+              <a id="facebook-link" href="#" class="footer-anchor-links"> </a>
+              <a id="youtube-link" href="#" class="footer-anchor-links"> </a>
+              <a id="linkedin-link" href="#" class="footer-anchor-links"> </a>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>
