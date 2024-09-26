@@ -30,8 +30,8 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   </head>
-  <body class="flex flex-col h-screen w-full">
-    <div class="flex flex-col flex-grow">
+  <body class="relative h-full w-full">
+    <div class="h-full w-full flex flex-col">
       <header>
         <div class="text-xs 2xl:text-sm bg-blue text-white px-5 py-2">
           <div class="flex justify-between">
@@ -46,8 +46,7 @@
           </div>
         </div>
       </header>
-
-      <nav class="sticky top-0 z-50 bg-white py-3 px-5 shadow-md">
+      <nav id="navbar" class="sticky top-0 z-50 bg-white py-3 px-5 shadow-md">
         <div class="flex justify-between items-center">
           <a href="/src/index.html" class="no-underline">
             <img
@@ -56,43 +55,60 @@
               class="h-12"
             />
           </a>
-          <div class="hidden lg:inline-block gap-2">
-            <ul class="list-none text-sm flex flex-col lg:flex-row gap-5">
-              <li>
-                <a href="/src/news.html" class="navbar-anchor-links"
-                  >News and Updates</a
-                >
-              </li>
-              <li>
-                <a href="/src/about.html" class="navbar-anchor-links"
-                  >About us</a
-                >
-              </li>
-              <li>
-                <a href="/src/services.html" class="navbar-anchor-links"
-                  >Our Services</a
-                >
-              </li>
-              <li>
-                <a href="/src/imis.html" class="navbar-anchor-links">IMIS</a>
-              </li>
-              <li>
-                <a href="/src/ebps.html" class="navbar-anchor-links">e-BPS</a>
-              </li>
-              <li>
-                <a href="#" class="navbar-anchor-links">Knowledge Products</a>
-              </li>
-            </ul>
+          <div class="inline-block">
+            <div class="hidden lg:inline-block gap-2">
+              <ul class="list-none text-sm flex flex-col lg:flex-row gap-5">
+                <li>
+                  <a href="/src/index.html" class="navbar-anchor-links">Home</a>
+                </li>
+                <li>
+                  <a href="/src/about.html" class="navbar-anchor-links"
+                    >About us</a
+                  >
+                </li>
+                <li>
+                  <a href="/src/services.html" class="navbar-anchor-links"
+                    >Our Services</a
+                  >
+                </li>
+                <li>
+                  <a href="/src/news.html" class="navbar-anchor-links"
+                    >News and Updates</a
+                  >
+                </li>
+                <li>
+                  <a href="/src/imis.html" class="navbar-anchor-links">IMIS</a>
+                </li>
+                <li>
+                  <a href="/src/ebps.html" class="navbar-anchor-links">e-BPS</a>
+                </li>
+                <li>
+                  <a
+                    href="/src/knowledge-products.html"
+                    class="navbar-anchor-links"
+                    >Knowledge Products</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <input
+              type="text"
+              name="search"
+              id=""
+              placeholder="Search..."
+              class="ml-5 mr-5 px-2 py-1 text-blue border-x-0 border-t-0 border focus:outline-none"
+            />
+            <span id="open-mobile-nav" class="lg:hidden">
+              <button
+                id="hamburger-Icon"
+                class="bg-white border-none cursor-pointer text-blue"
+              ></button
+            ></span>
           </div>
-          <span id="open-mobile-nav" class="lg:hidden">
-            <button
-              id="hamburger-Icon"
-              class="bg-white border-none cursor-pointer text-blue"
-            ></button
-          ></span>
         </div>
       </nav>
 
+      <!-- mobile sidebar  -->
       <div class="lg:hidden">
         <div
           id="mobile-sidebar"
@@ -122,8 +138,8 @@
               <div class="flex flex-col gap-5 justify-between">
                 <ul class="list-none text-sm flex flex-col lg:flex-row gap-5">
                   <li>
-                    <a href="/src/news.html" class="navbar-anchor-links"
-                      >News and Updates</a
+                    <a href="/src/index.html" class="navbar-anchor-links"
+                      >Home</a
                     >
                   </li>
                   <li>
@@ -137,6 +153,11 @@
                     >
                   </li>
                   <li>
+                    <a href="/src/news.html" class="navbar-anchor-links"
+                      >News and Updates</a
+                    >
+                  </li>
+                  <li>
                     <a href="/src/imis.html" class="navbar-anchor-links"
                       >IMIS</a
                     >
@@ -147,7 +168,9 @@
                     >
                   </li>
                   <li>
-                    <a href="#" class="navbar-anchor-links"
+                    <a
+                      href="/src/knowledge-products.html"
+                      class="navbar-anchor-links"
                       >Knowledge Products</a
                     >
                   </li>
@@ -160,7 +183,7 @@
       </div>
 
       <div class="flex-grow">
-        <div class="px-5 sm:px-10 md:px-14 xl:px-20 2xl:px-60 py-10">
+        <div class="px-5 sm:px-10 md:px-14 xl:px-20 2xl:px-60 pt-10 pb-2">
           <div class="grid grid-cols-1 md:grid-cols-2">
             <div class="h-full flex flex-col justify-center">
               <h1 class="mt-2 text-6xl text-blue">KNOWLEDGE PRODUCTS</h1>
@@ -182,7 +205,38 @@
               />
             </div>
           </div>
+        </div>
 
+        <div
+          class="px-5 sm:px-10 md:px-14 xl:px-20 2xl:px-60 py-5 h-full bg-gray-100"
+        >
+          <div
+            id="projects-grid"
+            class="mt-5 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5"
+          >
+            <script>
+              const projects = [
+                "https://images.pexels.com/photos/27907084/pexels-photo-27907084/free-photo-of-a-construction-site-with-scaffolding-and-a-building.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                "https://images.pexels.com/photos/9396159/pexels-photo-9396159.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                "https://images.pexels.com/photos/7441094/pexels-photo-7441094.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                "https://images.pexels.com/photos/3415148/pexels-photo-3415148.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                "https://images.pexels.com/photos/3321796/pexels-photo-3321796.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+              ];
+              document.getElementById("projects-grid").innerHTML += projects
+                .slice(0, 5)
+                .map(
+                  (project, i) => `
+                           <div>
+                             <div  class="h-64 xl:h-80 2xl:h-96 w-full bg-light-black bg-opacity-10 rounded-md">
+                                               <img src=${project} alt="" class="h-full w-full object-cover"/>
+                                               </div>
+                             <p class="mt-2 text-sm text-gray-500 line-clamp-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae ratione accusamus dignissimos, suscipit aut dolor animi atque placeat a doloremque!                  </p>
+                           </div>
+                          `
+                )
+                .join("");
+            </script>
+          </div>
         </div>
       </div>
 

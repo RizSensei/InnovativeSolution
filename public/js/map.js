@@ -15,9 +15,9 @@ L.TopoJSON = L.GeoJSON.extend({
 });
 
 // Initialize map
-let map = L.map("map", { minZoom: 7.5, keyboard: false }).setView(
+let map = L.map("map", { minZoom: 7, keyboard: false }).setView(
     [28.1734922968426, 83.98199462890626],
-    8
+    7
   ),
   topoLayer = new L.TopoJSON();
 

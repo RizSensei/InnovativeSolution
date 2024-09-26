@@ -42,6 +42,7 @@
       integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
       crossorigin=""
     ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.snogylop/1.0.2/leaflet.snogylop.js"></script>
   </head>
   <body class="relative h-full w-full">
     <div class="h-full w-full flex flex-col">
@@ -68,43 +69,52 @@
               class="h-12"
             />
           </a>
-          <div class="hidden lg:inline-block gap-2">
-            <ul class="list-none text-sm flex flex-col lg:flex-row gap-5">
-              <li>
-                <a href="/src/news.html" class="navbar-anchor-links"
-                  >News and Updates</a
-                >
-              </li>
-              <li>
-                <a href="/src/about.html" class="navbar-anchor-links"
+          <div class="inline-block">
+            <div class="hidden lg:inline-block gap-2">
+              <ul class="list-none text-sm flex flex-col lg:flex-row gap-5">
+                <li>
+                  <a href="/src/index.html" class="navbar-anchor-links"
+                    >Home</a
+                  >
+                </li>
+                <li>
+                  <a href="/src/about.html" class="navbar-anchor-links"
                   >About us</a
-                >
-              </li>
-              <li>
-                <a href="/src/services.html" class="navbar-anchor-links"
+                  >
+                </li>
+                <li>
+                  <a href="/src/services.html" class="navbar-anchor-links"
                   >Our Services</a
-                >
-              </li>
-              <li>
-                <a href="/src/imis.html" class="navbar-anchor-links">IMIS</a>
-              </li>
-              <li>
-                <a href="/src/ebps.html" class="navbar-anchor-links">e-BPS</a>
-              </li>
-              <li>
-                <a href="#" class="navbar-anchor-links">Knowledge Products</a>
-              </li>
-            </ul>
+                  >
+                </li>
+                <li>
+                  <a href="/src/news.html" class="navbar-anchor-links"
+                    >News and Updates</a
+                  >
+                </li>
+                <li>
+                  <a href="/src/imis.html" class="navbar-anchor-links">IMIS</a>
+                </li>
+                <li>
+                  <a href="/src/ebps.html" class="navbar-anchor-links">e-BPS</a>
+                </li>
+                <li>
+                  <a href="/src/knowledge-products.html" class="navbar-anchor-links">Knowledge Products</a>
+                </li>
+              </ul>
+            </div>
+            <input type="text" name="search" id="" placeholder="Search..." class="ml-5 mr-5 px-2 py-1 text-blue border-x-0 border-t-0 border focus:outline-none">
+            <span id="open-mobile-nav" class="lg:hidden">
+              <button
+                id="hamburger-Icon"
+                class="bg-white border-none cursor-pointer text-blue"
+              ></button
+            ></span>
           </div>
-          <span id="open-mobile-nav" class="lg:hidden">
-            <button
-              id="hamburger-Icon"
-              class="bg-white border-none cursor-pointer text-blue"
-            ></button
-          ></span>
         </div>
       </nav>
 
+      <!-- mobile sidebar  -->
       <div class="lg:hidden">
         <div
           id="mobile-sidebar"
@@ -134,34 +144,33 @@
               <div class="flex flex-col gap-5 justify-between">
                 <ul class="list-none text-sm flex flex-col lg:flex-row gap-5">
                   <li>
+                    <a href="/src/index.html" class="navbar-anchor-links"
+                      >Home</a
+                    >
+                  </li>
+                  <li>
+                    <a href="/src/about.html" class="navbar-anchor-links"
+                    >About us</a
+                    >
+                  </li>
+                  <li>
+                    <a href="/src/services.html" class="navbar-anchor-links"
+                    >Our Services</a
+                    >
+                  </li>
+                  <li>
                     <a href="/src/news.html" class="navbar-anchor-links"
                       >News and Updates</a
                     >
                   </li>
                   <li>
-                    <a href="/src/about.html" class="navbar-anchor-links"
-                      >About us</a
-                    >
+                    <a href="/src/imis.html" class="navbar-anchor-links">IMIS</a>
                   </li>
                   <li>
-                    <a href="/src/services.html" class="navbar-anchor-links"
-                      >Our Services</a
-                    >
+                    <a href="/src/ebps.html" class="navbar-anchor-links">e-BPS</a>
                   </li>
                   <li>
-                    <a href="/src/imis.html" class="navbar-anchor-links"
-                      >IMIS</a
-                    >
-                  </li>
-                  <li>
-                    <a href="/src/ebps.html" class="navbar-anchor-links"
-                      >e-BPS</a
-                    >
-                  </li>
-                  <li>
-                    <a href="#" class="navbar-anchor-links"
-                      >Knowledge Products</a
-                    >
+                    <a href="/src/knowledge-products.html" class="navbar-anchor-links">Knowledge Products</a>
                   </li>
                 </ul>
               </div>
@@ -241,6 +250,7 @@
                 Patan Dhoka in Lalitpur Metropolitan City.
               </p>
             </div>
+            
             <div>
               <h1 class="font-semibold text-2xl text-blue">Our Footprint</h1>
               <div id="map" class="mt-2 h-[500px] w-full"></div>
@@ -317,14 +327,21 @@
               class="mt-5 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-5"
             >
               <script>
-                document.getElementById("projects-grid").innerHTML += [
-                  1, 1, 1, 1, 1,
-                ]
+                              const projects = [
+                "https://images.pexels.com/photos/27907084/pexels-photo-27907084/free-photo-of-a-construction-site-with-scaffolding-and-a-building.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                "https://images.pexels.com/photos/9396159/pexels-photo-9396159.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                "https://images.pexels.com/photos/7441094/pexels-photo-7441094.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                "https://images.pexels.com/photos/3415148/pexels-photo-3415148.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+                "https://images.pexels.com/photos/3321796/pexels-photo-3321796.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              ]
+                document.getElementById("projects-grid").innerHTML += projects
                   .map(
-                    (sector, i) => `
+                    (project, i) => `
                        <div
-                class="h-64 2xl:h-80 w-full bg-light-black bg-opacity-10 rounded-md"
+                class="h-64 2xl:h-96 w-full bg-light-black bg-opacity-10 rounded-md"
               >
+                    <img src=${project} alt="" class="h-full w-full object-cover"/>
+
               </div>
                       `
                   )

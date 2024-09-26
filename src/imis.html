@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="/public/css/style.css" />
     <script src="/public/js/icon.js" defer></script>
     <script src="/public/js/script.js" defer></script>
-    <script src="/public/mock/functional_modules.js" defer></script>
     <script
       src="https://kit.fontawesome.com/0a09f83869.js"
       crossorigin="anonymous"
@@ -27,6 +26,19 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
     <script src="/public/js/owl.js" defer></script>
     <!-- owl carousel ends  -->
+
+    <!--
+        leaflet scripts
+    -->
+    <link
+      rel="stylesheet"
+      href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css"
+    />
+    <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+
+    <!--
+        leaflet scripts ends 
+    -->
   </head>
   <body class="relative h-full w-full">
     <div class="h-full w-full flex flex-col">
@@ -53,43 +65,52 @@
               class="h-12"
             />
           </a>
-          <div class="hidden lg:inline-block gap-2">
-            <ul class="list-none text-sm flex flex-col lg:flex-row gap-5">
-              <li>
-                <a href="/src/news.html" class="navbar-anchor-links"
-                  >News and Updates</a
-                >
-              </li>
-              <li>
-                <a href="/src/about.html" class="navbar-anchor-links"
+          <div class="inline-block">
+            <div class="hidden lg:inline-block gap-2">
+              <ul class="list-none text-sm flex flex-col lg:flex-row gap-5">
+                <li>
+                  <a href="/src/index.html" class="navbar-anchor-links"
+                    >Home</a
+                  >
+                </li>
+                <li>
+                  <a href="/src/about.html" class="navbar-anchor-links"
                   >About us</a
-                >
-              </li>
-              <li>
-                <a href="/src/services.html" class="navbar-anchor-links"
+                  >
+                </li>
+                <li>
+                  <a href="/src/services.html" class="navbar-anchor-links"
                   >Our Services</a
-                >
-              </li>
-              <li>
-                <a href="/src/imis.html" class="navbar-anchor-links">IMIS</a>
-              </li>
-              <li>
-                <a href="/src/ebps.html" class="navbar-anchor-links">e-BPS</a>
-              </li>
-              <li>
-                <a href="#" class="navbar-anchor-links">Knowledge Products</a>
-              </li>
-            </ul>
+                  >
+                </li>
+                <li>
+                  <a href="/src/news.html" class="navbar-anchor-links"
+                    >News and Updates</a
+                  >
+                </li>
+                <li>
+                  <a href="/src/imis.html" class="navbar-anchor-links">IMIS</a>
+                </li>
+                <li>
+                  <a href="/src/ebps.html" class="navbar-anchor-links">e-BPS</a>
+                </li>
+                <li>
+                  <a href="/src/knowledge-products.html" class="navbar-anchor-links">Knowledge Products</a>
+                </li>
+              </ul>
+            </div>
+            <input type="text" name="search" id="" placeholder="Search..." class="ml-5 mr-5 px-2 py-1 text-blue border-x-0 border-t-0 border focus:outline-none">
+            <span id="open-mobile-nav" class="lg:hidden">
+              <button
+                id="hamburger-Icon"
+                class="bg-white border-none cursor-pointer text-blue"
+              ></button
+            ></span>
           </div>
-          <span id="open-mobile-nav" class="lg:hidden">
-            <button
-              id="hamburger-Icon"
-              class="bg-white border-none cursor-pointer text-blue"
-            ></button
-          ></span>
         </div>
       </nav>
 
+      <!-- mobile sidebar  -->
       <div class="lg:hidden">
         <div
           id="mobile-sidebar"
@@ -119,34 +140,33 @@
               <div class="flex flex-col gap-5 justify-between">
                 <ul class="list-none text-sm flex flex-col lg:flex-row gap-5">
                   <li>
+                    <a href="/src/index.html" class="navbar-anchor-links"
+                      >Home</a
+                    >
+                  </li>
+                  <li>
+                    <a href="/src/about.html" class="navbar-anchor-links"
+                    >About us</a
+                    >
+                  </li>
+                  <li>
+                    <a href="/src/services.html" class="navbar-anchor-links"
+                    >Our Services</a
+                    >
+                  </li>
+                  <li>
                     <a href="/src/news.html" class="navbar-anchor-links"
                       >News and Updates</a
                     >
                   </li>
                   <li>
-                    <a href="/src/about.html" class="navbar-anchor-links"
-                      >About us</a
-                    >
+                    <a href="/src/imis.html" class="navbar-anchor-links">IMIS</a>
                   </li>
                   <li>
-                    <a href="/src/services.html" class="navbar-anchor-links"
-                      >Our Services</a
-                    >
+                    <a href="/src/ebps.html" class="navbar-anchor-links">e-BPS</a>
                   </li>
                   <li>
-                    <a href="/src/imis.html" class="navbar-anchor-links"
-                      >IMIS</a
-                    >
-                  </li>
-                  <li>
-                    <a href="/src/ebps.html" class="navbar-anchor-links"
-                      >e-BPS</a
-                    >
-                  </li>
-                  <li>
-                    <a href="#" class="navbar-anchor-links"
-                      >Knowledge Products</a
-                    >
+                    <a href="/src/knowledge-products.html" class="navbar-anchor-links">Knowledge Products</a>
                   </li>
                 </ul>
               </div>
@@ -174,7 +194,9 @@
               >
                 INTEGRATED MUNICIPAL INFORMATION SYSTEM
               </h1>
-              <p class="text-sm 2xl:text-base text-light-black font-medium text-justify">
+              <p
+                class="text-sm 2xl:text-base text-light-black font-medium text-justify"
+              >
                 The Integrated Municipal Information System (IMIS) is a
                 comprehensive digital platform that seamlessly merges web,
                 mobile and GIS technologies, leveraging open-source software
@@ -186,6 +208,213 @@
                 systems and services with the aim of achieving SDG 6.2 through
                 the Citywide Inclusive Sanitation (CWIS) approach.
               </p>
+            </div>
+          </div>
+
+          <!-- imis map  -->
+          <div class="py-5">
+            <div
+              id="map"
+              style="width: 100%; height: 500px"
+              class="-z-0 border border-gray-300 rounded-2xl overflow-hidden"
+            ></div>
+            <script>
+              const locations = [
+                {
+                  lat: 28.5776,
+                  lng: 81.6254,
+                  city: "Birendranagar",
+                  country: "Nepal",
+                  stage: "Readiness Assessment",
+                  year: 2021,
+                },
+                {
+                  lat: 28.5776,
+                  lng: 81.6254,
+                  city: "Birendranagar",
+                  country: "Nepal",
+                  stage: "CWIS Planning",
+                  year: 2021,
+                },
+                {
+                  lat: 27.6427,
+                  lng: 85.3705,
+                  city: "Mahalaxmi",
+                  country: "Nepal",
+                  stage: "Operational",
+                  year: 2022,
+                },
+                {
+                  lat: 27.9772,
+                  lng: 83.7677,
+                  city: "Waling",
+                  country: "Nepal",
+                  stage: "Readiness Assessment",
+                  year: 2023,
+                },
+                {
+                  lat: 27.9772,
+                  lng: 83.7677,
+                  city: "Waling",
+                  country: "Nepal",
+                  stage: "CWIS Planning",
+                  year: 2023,
+                },
+              ];
+
+              // Creating a map object
+              var map = new L.map("map", {
+                center: [27.7172, 85.324],
+                zoom: 6,
+                minZoom: 3,
+                maxZoom: 10,
+                maxBounds: L.latLngBounds([
+                  [-90, -170],
+                  [90, 190],
+                ]),
+              });
+
+              var tileLayer = L.tileLayer(
+                "https://{s}.tile.openstreetmap.de/{z}/{x}/{y}.png",
+                {
+                  attribution: "© OpenStreetMap contributors",
+                }
+              ).addTo(map);
+
+              const groupedLocations = {};
+              locations.forEach((location) => {
+                const key = `${location.lat},${location.lng}`;
+                if (!groupedLocations[key]) {
+                  groupedLocations[key] = [];
+                }
+                groupedLocations[key].push(location);
+              });
+              console.log(groupedLocations);
+
+              // Create markers and bind popups
+              Object.values(groupedLocations).forEach((locations) => {
+                const marker = L.marker([locations[0].lat, locations[0].lng]);
+                let popupContent = "";
+
+                const getColorClass = (name) => {
+                  switch (name) {
+                    case "Readiness Assessment":
+                      return "#2A629A";
+                    case "CWIS Planning":
+                      return "#68D2E8";
+                    case "Under Development":
+                      return "#FF7F3E";
+                    case "Operational":
+                      return "#FFDA78";
+                    default:
+                      return "#003285";
+                  }
+                };
+
+                popupContent += `<p><span class="font-semibold">${locations[0].city}</span><br />`;
+
+                locations.forEach((location) => {
+                  popupContent += `<div class="flex gap-4 justify-between">
+                      <div class="flex items-center justify-center gap-1">
+                      <div class="h-2 w-2 rounded-full" style="background-color: ${getColorClass(
+                        location.stage
+                      )};"></div>
+                    <h1 class="text-xs font-medium">${location.stage}</h1>
+                    </div>
+                    <h1 class="text-xs font-medium">${location.year}</h1>
+                    </div>`;
+                });
+
+                popupContent += `</p>`;
+                marker.bindPopup(popupContent).openPopup();
+                marker.addTo(map);
+              });
+            </script>
+          </div>
+
+          <!--
+        IMIS Footprints
+      -->
+          <div class="relative w-full h-80 md:h-96">
+            <img
+              src="https://images.pexels.com/photos/3183153/pexels-photo-3183153.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              alt="Placeholder Image"
+              class="w-full h-full object-cover"
+            />
+            <div class="absolute inset-0 bg-black opacity-80"></div>
+            <div
+              class="fade-in absolute inset-0 flex flex-col items-center justify-center"
+            >
+              <h1 class="text-white text-2xl font-semibold">IMIS Footprints</h1>
+              <div
+                id="fooprints-container"
+                class="mt-5 md:mt-10 grid grid-cols-3 md:grid-cols-6 gap-5 text-[#226BBD]"
+              >
+                <script>
+                  const footprints = [
+                    {
+                      name: "Countries",
+                      count: "04",
+                    },
+                    {
+                      name: "Cities",
+                      count: "24",
+                    },
+                    {
+                      name: "Readiness Assessment",
+                      count: "10",
+                    },
+                    {
+                      name: "CWIS Planning",
+                      count: "10",
+                    },
+                    {
+                      name: "Under Development",
+                      count: "05",
+                    },
+                    {
+                      name: "Operational",
+                      count: "06",
+                    },
+                  ];
+
+                  const footprintContainer = document.getElementById(
+                    "fooprints-container"
+                  );
+
+                  const getColorClass = (name) => {
+                    switch (name) {
+                      case "Readiness Assessment":
+                        return "#2A629A";
+                      case "CWIS Planning":
+                        return "#68D2E8";
+                      case "Under Development":
+                        return "#FF7F3E";
+                      case "Operational":
+                        return "#FFDA78";
+                      default:
+                        return "#003285";
+                    }
+                  };
+
+                  const footprintDivs = footprints.map(
+                    (footprint) => `
+            <div class="flex flex-col text-center">
+              <h1 class="text-3xl md:text-4xl font-semibold"  style="color: ${getColorClass(
+                footprint.name
+              )};">
+                ${footprint.count}
+              </h1>
+              <h1 class="text-sm md:text-base font-semibold text-white">
+                ${footprint.name}
+              </h1>
+            </div>
+            `
+                  );
+
+                  footprintContainer.innerHTML = footprintDivs.join("");
+                </script>
+              </div>
             </div>
           </div>
 
@@ -407,7 +636,9 @@
                 </div>
               </div>
               <div class="w-full flex flex-col items-center justify-center">
-                <p class="text-sm 2xl:text-base text-light-black mt-2 text-justify">
+                <p
+                  class="text-sm 2xl:text-base text-light-black mt-2 text-justify"
+                >
                   CWIS is an approach to achieve SDG 6.2 for safe, equitable and
                   financially viable sanitation systems and services. CWIS
                   ensures everyone in a city has access to safely managed
