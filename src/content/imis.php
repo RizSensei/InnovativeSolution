@@ -1,189 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Innovative Solution</title>
-    <link rel="stylesheet" href="/public/css/output.css" />
-    <link rel="stylesheet" href="/public/css/style.css" />
-    <script src="/public/js/icon.js" defer></script>
-    <script src="/public/js/script.js" defer></script>
-    <script
-      src="https://kit.fontawesome.com/0a09f83869.js"
-      crossorigin="anonymous"
-    ></script>
-
-    <!-- owl carousel starts  -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
-    />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-    <script src="/public/js/owl.js" defer></script>
-    <!-- owl carousel ends  -->
-
-    <!--
-        leaflet scripts
-    -->
-    <link
-      rel="stylesheet"
-      href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css"
-    />
-    <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
-
-    <!--
-        leaflet scripts ends 
-    -->
-  </head>
-  <body class="relative h-full w-full">
-    <div class="h-full w-full flex flex-col">
-      <header>
-        <div class="text-xs 2xl:text-sm bg-blue text-white px-5 py-2">
-          <div class="flex justify-between">
-            <div class="flex gap-1 items-center">
-              <span id="phone-Icon"></span>
-              <span>+977-01-5446880</span>
-            </div>
-            <div class="flex gap-1 items-center">
-              <span id="mail-Icon"></span>
-              <span>insol@innovativesolution.com.np</span>
-            </div>
-          </div>
-        </div>
-      </header>
-      <nav class="sticky top-0 z-50 bg-white py-3 px-5 shadow-md">
-        <div class="flex justify-between items-center">
-          <a href="/src/index.html" class="no-underline">
-            <img
-              src="/public/images/logo/Innovative logo.png"
-              alt="Innovative Solution Logo"
-              class="h-12"
-            />
-          </a>
-          <div class="inline-block">
-            <div class="hidden lg:inline-block gap-2">
-              <ul class="list-none text-sm flex flex-col lg:flex-row gap-5">
-                <li>
-                  <a href="/src/index.html" class="navbar-anchor-links"
-                    >Home</a
-                  >
-                </li>
-                <li>
-                  <a href="/src/about.html" class="navbar-anchor-links"
-                  >About us</a
-                  >
-                </li>
-                <li>
-                  <a href="/src/services.html" class="navbar-anchor-links"
-                  >Our Services</a
-                  >
-                </li>
-                <li>
-                  <a href="/src/news.html" class="navbar-anchor-links"
-                    >News and Updates</a
-                  >
-                </li>
-                <li>
-                  <a href="/src/imis.html" class="navbar-anchor-links">IMIS</a>
-                </li>
-                <li>
-                  <a href="/src/ebps.html" class="navbar-anchor-links">e-BPS</a>
-                </li>
-                <li>
-                  <a href="/src/knowledge-products.html" class="navbar-anchor-links">Knowledge Products</a>
-                </li>
-              </ul>
-            </div>
-            <input type="text" name="search" id="" placeholder="Search..." class="ml-5 mr-5 px-2 py-1 text-blue border-x-0 border-t-0 border focus:outline-none">
-            <span id="open-mobile-nav" class="lg:hidden">
-              <button
-                id="hamburger-Icon"
-                class="bg-white border-none cursor-pointer text-blue"
-              ></button
-            ></span>
-          </div>
-        </div>
-      </nav>
-
-      <!-- mobile sidebar  -->
-      <div class="lg:hidden">
-        <div
-          id="mobile-sidebar"
-          class="fixed top-0 z-[100] overflow-hidden h-screen w-full bg-black bg-opacity-50"
-        >
-          <div class="flex w-full h-full">
-            <div
-              class="h-full w-80 bg-white px-3 pt-3 pb-5 flex flex-col gap-5 overflow-y-auto"
-            >
-              <div
-                class="pb-2 flex justify-between items-center border-b border-solid border-x-0 border-t-0 border-b-blue/50"
-              >
-                <a href="/src/index.html">
-                  <img
-                    src="/public/images/logo/Innovative logo.png"
-                    alt="Innovative Solution Logo"
-                    class="h-16"
-                  />
-                </a>
-                <span id="close-mobile-nav">
-                  <button
-                    id="close-Icon"
-                    class="border-none bg-white cursor-pointer text-xl text-red-500"
-                  ></button>
-                </span>
-              </div>
-              <div class="flex flex-col gap-5 justify-between">
-                <ul class="list-none text-sm flex flex-col lg:flex-row gap-5">
-                  <li>
-                    <a href="/src/index.html" class="navbar-anchor-links"
-                      >Home</a
-                    >
-                  </li>
-                  <li>
-                    <a href="/src/about.html" class="navbar-anchor-links"
-                    >About us</a
-                    >
-                  </li>
-                  <li>
-                    <a href="/src/services.html" class="navbar-anchor-links"
-                    >Our Services</a
-                    >
-                  </li>
-                  <li>
-                    <a href="/src/news.html" class="navbar-anchor-links"
-                      >News and Updates</a
-                    >
-                  </li>
-                  <li>
-                    <a href="/src/imis.html" class="navbar-anchor-links">IMIS</a>
-                  </li>
-                  <li>
-                    <a href="/src/ebps.html" class="navbar-anchor-links">e-BPS</a>
-                  </li>
-                  <li>
-                    <a href="/src/knowledge-products.html" class="navbar-anchor-links">Knowledge Products</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div id="mobile-sidebar-right" class="flex-grow"></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="flex-grow">
-        <div class="px-5 sm:px-10 md:px-14 xl:px-20 2xl:px-60 py-10">
+<div class="px-5 sm:px-10 md:px-14 xl:px-20 2xl:px-60 py-10">
           <!-- imis introduction -->
           <div class="py-5 lg:flex lg:flex-row-reverse gap-10">
             <div class="h-full w-full lg:w-1/2">
               <object
                 type="image/svg+xml"
-                data="/public/images/imis/modules of imis.svg"
+                data="/hello/public/images/imis/modules of imis.svg"
               ></object>
             </div>
             <div
@@ -452,28 +273,28 @@
                             <div class="flex gap-0.5">
                               <div class="h-12 aspect-square bg-white">
                                 <img
-                                  src="/public/images/imis/Global_goals/Clean water and sanitation.png"
+                                  src="/hello/public/images/imis/Global_goals/Clean water and sanitation.png"
                                   alt="Clean Water and Sanitation"
                                   class="h-full w-full object-contain"
                                 />
                               </div>
                               <div class="h-12 aspect-square bg-white">
                                 <img
-                                  src="/public/images/imis/Global_goals/Sustainable cities and communities.png"
+                                  src="/hello/public/images/imis/Global_goals/Sustainable cities and communities.png"
                                   alt="Sustainable cities and communities"
                                   class="h-full w-full object-contain"
                                 />
                               </div>
                               <div class="h-12 aspect-square bg-white">
                                 <img
-                                  src="/public/images/imis/Global_goals/Gender Equality.png"
+                                  src="/hello/public/images/imis/Global_goals/Gender Equality.png"
                                   alt="Gender Equality"
                                   class="h-full w-full object-contain"
                                 />
                               </div>
                               <div class="h-12 aspect-square bg-white">
                                 <img
-                                  src="/public/images/imis/Global_goals/Good Health and well-being.png"
+                                  src="/hello/public/images/imis/Global_goals/Good Health and well-being.png"
                                   alt="Good Health and well-being"
                                   class="h-full w-full object-contain"
                                 />
@@ -488,21 +309,21 @@
                             <div class="flex gap-0.5">
                               <div class="h-12 aspect-square bg-white">
                                 <img
-                                  src="/public/images/imis/Global_goals/Clean water and sanitation.png"
+                                  src="/hello/public/images/imis/Global_goals/Clean water and sanitation.png"
                                   alt="Clean Water and Sanitation"
                                   class="h-full w-full object-contain"
                                 />
                               </div>
                               <div class="h-12 aspect-square bg-white">
                                 <img
-                                  src="/public/images/imis/Global_goals/Good Health and well-being.png"
+                                  src="/hello/public/images/imis/Global_goals/Good Health and well-being.png"
                                   alt="Good Health and well-being"
                                   class="h-full w-full object-contain"
                                 />
                               </div>
                               <div class="h-12 aspect-square bg-white">
                                 <img
-                                  src="/public/images/imis/Global_goals/Sustainable cities and communities.png"
+                                  src="/hello/public/images/imis/Global_goals/Sustainable cities and communities.png"
                                   alt="Sustainable cities and communities"
                                   class="h-full w-full object-contain"
                                 />
@@ -517,28 +338,28 @@
                             <div class="flex gap-0.5">
                               <div class="h-12 aspect-square bg-white">
                                 <img
-                                  src="/public/images/imis/Global_goals/Clean water and sanitation.png"
+                                  src="/hello/public/images/imis/Global_goals/Clean water and sanitation.png"
                                   alt="Clean Water and Sanitation"
                                   class="h-full w-full object-contain"
                                 />
                               </div>
                               <div class="h-12 aspect-square bg-white">
                                 <img
-                                  src="/public/images/imis/Global_goals/Climate Action.png"
+                                  src="/hello/public/images/imis/Global_goals/Climate Action.png"
                                   alt="Climate Action"
                                   class="h-full w-full object-contain"
                                 />
                               </div>
                               <div class="h-12 aspect-square bg-white">
                                 <img
-                                  src="/public/images/imis/Global_goals/Good Health and well-being.png"
+                                  src="/hello/public/images/imis/Global_goals/Good Health and well-being.png"
                                   alt="Good Health and well-being"
                                   class="h-full w-full object-contain"
                                 />
                               </div>
                               <div class="h-12 aspect-square bg-white">
                                 <img
-                                  src="/public/images/imis/Global_goals/Sustainable cities and communities.png"
+                                  src="/hello/public/images/imis/Global_goals/Sustainable cities and communities.png"
                                   alt="Sustainable cities and communities"
                                   class="h-full w-full object-contain"
                                 />
@@ -723,7 +544,7 @@
                   UN Water SDG 6 Global Acceleration Framework
                 </h1>
                 <img
-                  src="/public/images/imis/water-sdg-6.png"
+                  src="/hello/public/images/imis/water-sdg-6.png"
                   alt=""
                   class="h-full w-full object-scale-down"
                 />
@@ -741,7 +562,7 @@
               >
                 <div class="h-full md:h-[550px] w-full md:w-[550px]">
                   <img
-                    src="/public/images/imis/system -architecture.png"
+                    src="/hello/public/images/imis/system -architecture.png"
                     alt=""
                     class="fade-in h-full w-full object-contain"
                   />
@@ -757,7 +578,7 @@
               >
                 <div class="h-full md:h-[550px] w-full md:w-[550px]">
                   <img
-                    src="/public/images/imis/imis-driven-service-model.png"
+                    src="/hello/public/images/imis/imis-driven-service-model.png"
                     alt=""
                     class="fade-in h-full w-full object-contain"
                   />
@@ -776,7 +597,7 @@
           <div class="h-full w-full bg-gray-100 py-10 flex justify-center">
             <div class="h-full md:h-[550px] w-full md:w-[600px]">
               <img
-                src="/public/images/imis/what-imis-facilitates.png"
+                src="/hello/public/images/imis/what-imis-facilitates.png"
                 alt=""
                 class="fade-in h-full w-full object-scale-down"
               />
@@ -824,27 +645,3 @@
             </div>
           </div>
         </div>
-      </div>
-
-      <footer>
-        <div class="px-5 lg:px-10 py-5 lg:py-8 bg-blue text-white text-sm">
-          <div
-            class="flex flex-col lg:flex-row gap-3 justify-between items-center"
-          >
-            <div class="text-center">
-              © Copyright <span> 2024</span> |  Innovative Solution Pvt. Ltd. |
-              All Rights Reserved |<span>Terms & Conditions</span> | <span
-                >Privacy Policy</span
-              >
-            </div>
-            <div class="flex gap-2">
-              <a id="facebook-link" href="#" class="footer-anchor-links"> </a>
-              <a id="youtube-link" href="#" class="footer-anchor-links"> </a>
-              <a id="linkedin-link" href="#" class="footer-anchor-links"> </a>
-            </div>
-          </div>
-        </div>
-      </footer>
-    </div>
-  </body>
-</html>

@@ -1,15 +1,14 @@
-
 // underline under active navbar link
 document.addEventListener("DOMContentLoaded", function () {
-    const links = document.querySelectorAll(".navbar-anchor-links");
-    const currentPage = window.location.pathname;
-  
-    links.forEach((link) => {
-      if (link.getAttribute("href") === currentPage) {
-        link.classList.add("active");
-      }
-    });
+  const links = document.querySelectorAll(".navbar-anchor-links");
+  const currentPage = window.location.pathname;
+
+  links.forEach((link) => {
+    if (link.getAttribute("href") === currentPage) {
+      link.classList.add("active");
+    }
   });
+});
 
 // mobile responsive navbar
 const openMobileNavButton = document.getElementById("open-mobile-nav");
@@ -47,3 +46,12 @@ function handleClick(clickedButton) {
   clickedButton.classList.add("bg-blue", "text-white");
   clickedButton.classList.remove("text-blue"); // Remove the default text color
 }
+
+document.addEventListener("DOMContentLoaded", function() {
+  const navbarHeight = document.getElementById("navbar").offsetHeight;
+  console.log(navbarHeight);
+
+  const stickyAboutNav = document.getElementById("stickyAboutNav");
+  stickyAboutNav.style.position = "sticky";
+  stickyAboutNav.style.top = `${navbarHeight}px`;
+});

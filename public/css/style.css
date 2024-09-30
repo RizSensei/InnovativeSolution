@@ -10,6 +10,10 @@
   scroll-behavior: smooth;
 }
 
+html, body {
+  height: 100%;
+}
+
 .nav-item.active {
   text-decoration: underline;
   color: #305A30;
@@ -29,14 +33,34 @@
 }
 
 .navbar-anchor-links {
-  width: 100%;
+  position: relative;
   color: #2a3f62;
   text-decoration: none;
   padding-bottom: 5px;
 }
 
-.navbar-anchor-links.active{
-  border-bottom: 3px solid #2a3f62;
+.navbar-anchor-links::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: rgba(42, 63, 98, 0.5);
+  transition: width 0.3s ease;
+}
+
+.navbar-anchor-links:hover::after {
+  width: 100%;
+}
+
+.navbar-anchor-links.active::after {
+  width: 100%; /* Keep the full width for active state */
+}
+
+.navbar-anchor-links.active:hover::after {
+  /* Prevent the hover effect when active */
+  width: 100%;
 }
 
 .about-links-ul > li:not(:last-child) {
